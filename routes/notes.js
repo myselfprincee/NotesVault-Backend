@@ -22,7 +22,7 @@ router.get('/allnotes', fetchUser, async (req, res) => {
 //ROUTE::2 Add a new Note using POST Request "/notes/addnote" ---> LOGIN REQUIRED
 router.post('/addnote', fetchUser, [
     body('title', "Enter atleast 1 Character in Title to save the Note").isLength({ min: 1 }),
-    body('description', "Enter atleast 10 Characters in Description to save the Note").isLength({ min: 1 })], async (req, res) => {
+    body('description', "Enter atleast 1 Characters in Description to save the Note").isLength({ min: 1 })], async (req, res) => {
         try {
 
 
